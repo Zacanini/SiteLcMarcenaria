@@ -1,10 +1,376 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&display=swap');
 
-:root{
+:root {
     --cor-de-fundo: #E0C919;
     --cor-titulo-grande: #000000;
     --cor--titulo-medio: #33322C;
     --cor--primaria: #36352A;
     --cor1--para--botao: #FFDA00;
-    --cor2--para--botao:#E2C100;
+    --cor2--para--botao: #E2C100;
 }
+
+* {
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: calc(100%);
+    background-color: var(--cor-de-fundo);
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: linear-gradient(#33322C, #36352A);
+    width: calc(100%);
+    position: sticky;
+    top: 0;
+    box-shadow: 0px 0px 100px -5px var(--cor-titulo-grande);
+    z-index: 1000;
+}
+
+.img1 {
+    width: 100%;
+    filter: blur(0.5px);
+}
+
+.container {
+    position: relative;
+    display: inline-block;
+}
+
+.container h1 {
+    color: white;
+    font-family: 'Kanit';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 10px;
+    background-color: #33322ca2;
+}
+
+.letra {
+    color: var(--cor-de-fundo);
+    font-family: 'Kanit';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+}
+
+.titulo-grande {
+    margin-left: 10px;
+    font-family: 'Kanit';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+
+
+}
+
+.paragrafo {
+    margin-left: 13px;
+    text-align:initial;
+    font-family: 'Crimson Text';
+    font-weight: 400;
+    font-display: swap;
+}
+
+
+
+
+#bottone1 {
+    padding: 10px 15px;
+    border-radius: 9px;
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    background: var(--cor1--para--botao);
+    border: 1px solid var(--cor2--para--botao);
+    text-align: center;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#bottone1:hover {
+    box-shadow: 7px 5px 56px -14px #C3D900;
+    transform: scale(0.95);
+}
+
+#bottone1:active {
+    transform: scale(0.95);
+    box-shadow: 7px 5px 56px -10px #C3D900;
+}
+
+.w-full {
+    width: 100%;
+  }
+  
+  .h-40 {
+    height: 10rem;
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  .items-center {
+    align-items: center;
+  }
+  
+  .justify-center {
+    justify-content: center;
+  }
+  
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  
+  .relative {
+    position: relative;
+  }
+  
+  .inline-flex {
+    display: inline-flex;
+  }
+  
+  .items-center {
+    align-items: center;
+  }
+  
+  .justify-start {
+    justify-content: flex-start;
+  }
+  
+  .py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+  
+  .pl-4 {
+    padding-left: 1rem;
+  }
+  
+  .pr-12 {
+    padding-right: 3rem;
+  }
+  
+  .overflow-hidden {
+    overflow: hidden;
+  }
+  
+  .font-semibold {
+    font-weight: 600;
+  }
+  
+  .shadow {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  }
+  
+  .text-indigo-600 {
+    color: #4a5568;
+  }
+  
+  .transition-all {
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .duration-150 {
+    transition-duration: 150ms;
+  }
+  
+  .ease-in-out {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .rounded {
+    border-radius: 0.25rem;
+  }
+  
+  .hover\:pl-10:hover {
+    padding-left: 2.5rem;
+  }
+  
+  .hover\:pr-6:hover {
+    padding-right: 1.5rem;
+  }
+  
+  .bg-gray-50 {
+    background-color: #f9fafb;
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+  }
+  
+  .dark\:bg-gray-700 {
+    background-color: #2d3748;
+  }
+  
+  .dark\:text-white {
+    color: #fff
+  }
+  
+  .dark\:hover\:text-gray-200:hover {
+    color: #edf2f7;
+  }
+  
+  .dark\:shadow-none {
+    box-shadow: none;
+  }
+  
+  .group:hover .group-hover\:h-full {
+    height: 100%;
+  }
+  
+  .absolute {
+    position: absolute;
+  }
+  
+  .bottom-0 {
+    bottom: 0;
+  }
+  
+  .left-0 {
+    left: 0;
+  }
+  
+  .w-full {
+    width: 100%;
+  }
+  
+  .h-1 {
+    height: 0.25rem;
+  }
+  
+  .transition-all {
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .duration-150 {
+    transition-duration: 150ms;
+  }
+  
+  .ease-in-out {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .bg-indigo-600 {
+    background-color: #4a5568;
+  }
+  
+  .absolute {
+    position: absolute;
+  }
+  
+  .right-0 {
+    right: 0;
+  }
+  
+  .pr-4 {
+    padding-right: 1rem;
+  }
+  
+  .duration-200 {
+    transition-duration: 200ms;
+  }
+  
+  .ease-out {
+    transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+  }
+  
+  .group:hover .group-hover\:translate-x-12 {
+    transform: translateX(3rem);
+  }
+  
+  .w-5 {
+    width: 1.25rem;
+  }
+  
+  .h-5 {
+    height: 1.25rem;
+  }
+  
+  .text-green-400 {
+    color: #48bb78;
+  }
+  
+  .absolute {
+    position: absolute;
+  }
+  
+  .left-0 {
+    left: 0;
+  }
+  
+  .pl-2\.5 {
+    padding-left: 0.625rem;
+  }
+  
+  .-translate-x-12 {
+    transform: translateX(-3rem);
+  }
+  
+  .group:hover .group-hover\:translate-x-0 {
+    transform: translateX(0);
+  }
+  
+  .ease-out {
+    transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+  }
+  
+  .duration-200 {
+    transition-duration: 200ms;
+  }
+  
+  .w-5 {
+    width: 1.25rem;
+  }
+  
+  .h-5 {
+    height: 1.25rem;
+  }
+  
+  .text-green-400 {
+    color: #48bb78;
+  }
+  
+  .relative {
+    position: relative;
+  }
+  
+  .w-full {
+    width: 100%;
+  }
+  
+  .text-left {
+    text-align: left;
+  }
+  
+  .transition-colors {
+    transition-property: background-color, border-color, color, fill, stroke;
+  }
+  
+  .duration-200 {
+    transition-duration: 200ms;
+  }
+  
+  .ease-in-out {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .group:hover .group-hover\:text-white {
+    color: #fff;
+  }
+  
+  .dark\:group-hover\:text-gray-200:hover {
+    color: #edf2f7;
+  }
+  
