@@ -437,6 +437,24 @@ nav {
     flex-direction: column;
     align-items: center;
    }
+   .mostrUm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   }
+   .mostrDois{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   }
+   .mostrTres{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   }
    .mostruario{
     width: 95vw;
     border-radius: 8px;
@@ -483,6 +501,18 @@ nav {
 .img3 {
   width: 100%;
   filter: blur(0.8px);
+}
+
+@media (min-width: 450px) and (max-width: 780px) {
+  .mostrContainer{
+    display: grid;
+    grid-template-columns: 3fr;
+   }
+   .mostruario{
+    width: 95vw;
+    border-radius: 8px;
+    
+  }
 }
 
 
